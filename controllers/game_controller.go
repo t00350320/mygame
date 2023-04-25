@@ -264,6 +264,7 @@ func getSpecFromDeployment(deploy *appsv1.Deployment) appsv1.DeploymentSpec {
 func getIngressSpec(game *myappv1.Game, labels map[string]string) networkingv1.IngressSpec {
 	pathType := networkingv1.PathTypePrefix
 	return networkingv1.IngressSpec{
+		IngressClassName: &game.Spec.IngressClassName,
 		Rules: []networkingv1.IngressRule{
 			{
 				Host: game.Spec.Host,

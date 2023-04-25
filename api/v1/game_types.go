@@ -38,6 +38,10 @@ type GameSpec struct {
 
 	// Ingress Host name
 	Host string `json:"host,omitempty"`
+	
+	// IngressClassName
+	IngressClassName string `json:"ingressClassName,omitempty"`
+
 }
 
 const (
